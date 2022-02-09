@@ -1,0 +1,38 @@
+https://fcm.googleapis.com/fcm/send
+
+
+Body 
+في شكل raw
+
+{
+"to":"cFUsVeLsQ46Um7uKinmEe-:APA91bGohKz963WIsw45BiRW1NmJeXwqHgxAAXzlkESjugZsuXo03c8bCpgegDQkffWYRCaT6ygAmDSCuUtXOhcMA2dni7nQ9TK0pFXHl6CyoKLLnP2NcHNMt3MJerHf9RwTMTK4b1iN",
+"notification":{
+    "title":"you have recieved a messgae from Mohamed Ehap",
+    "body":"testing body from post man",
+    "sound":"default"
+},
+"android":{
+    "priority":"HIGH",
+    "notification":{
+        "notificaton_priority":"PRIORITU_MAX",
+        "sound":"default",
+        "default_sound":"true",
+        "default_vibrate_timings":"true",
+        "default_light_settings":"true"
+    }
+ },
+ "data":{
+"type":"order",
+"id":"87",
+"click_action":"FLUTTER_NOTIFICATION_CLICK"
+ }
+}
+
+
+
+ودا سطر بنضيفة في  
+android-> app-> source->main->AndroidManifest.xml
+            <intent-filter>
+                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
